@@ -1,0 +1,9 @@
+此文件夹将包含宜兴旅游路线相关图片：
+
+1. bamboo_sea.jpg - 竹海风景区图片
+2. shanjuan_cave.jpg - 善卷洞风景区图片
+3. longbei_mountain.jpg - 龙背山森林公园图片
+4. yangxian_lake.jpg - 阳羡湖景区图片
+5. tuanqi_scenic.jpg - 团氿风景区图片
+
+请将相关图片放入此文件夹中。如果没有实际图片，网页将显示占位图像。
