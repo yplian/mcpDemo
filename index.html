@@ -3,241 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Demo 页面</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- 可选: AOS动画库 -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>南京-宜兴三日自然风光游</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- 头部区域 -->
-    <header>
+    <header class="header">
         <div class="container">
-            <div class="logo">
-                <a href="#">GitHub Demo</a>
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#home">首页</a></li>
-                    <li><a href="#about">关于</a></li>
-                    <li><a href="#services">服务</a></li>
-                    <li><a href="#portfolio">作品</a></li>
-                    <li><a href="#contact">联系我们</a></li>
-                </ul>
-            </nav>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <h1>南京-宜兴三日自然风光游</h1>
+            <p class="subtitle">探索山水风光，避开五一人流</p>
         </div>
     </header>
 
-    <!-- 首页区域 -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="hero-content" data-aos="fade-up">
-                <h1>欢迎访问 GitHub Demo</h1>
-                <p>这是一个通过GitHub Pages展示的示例网站</p>
-                <a href="#about" class="btn primary-btn">了解更多</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 关于区域 -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>关于我们</h2>
-                <p>了解更多关于我们的信息</p>
-            </div>
-            <div class="about-content">
-                <div class="about-img" data-aos="fade-right">
-                    <img src="https://placehold.co/600x400" alt="关于我们" class="lazy-load" data-src="https://placehold.co/600x400">
+    <div class="container">
+        <section class="intro">
+            <div class="intro-content">
+                <h2>行程概览</h2>
+                <p>这是一条为期三天的自然风光路线，从南京出发，探索宜兴的美丽自然景观，同时避开五一假期人流量大的热门景点。</p>
+                <div class="trip-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-mountain"></i>
+                        <h3>山水风光</h3>
+                        <p>欣赏竹海风景区、龙背山森林公园等自然风景</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-utensils"></i>
+                        <h3>美食体验</h3>
+                        <p>品尝宜兴特色美食和本地农家菜</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-leaf"></i>
+                        <h3>自然探索</h3>
+                        <p>体验溶洞探险、竹林漫步和湖边休闲</p>
+                    </div>
                 </div>
-                <div class="about-text" data-aos="fade-left">
-                    <h3>我们是谁</h3>
-                    <p>这是一个示例文本，您可以在这里介绍您的团队、公司或项目。详细说明您的使命、愿景和价值观。分享您的故事，让访问者了解您。</p>
-                    <p>您可以在这里添加更多段落，分享您的历史、成就和未来计划。这些内容有助于建立与访问者的联系并增强信任感。</p>
-                    <div class="tabs">
-                        <div class="tab-buttons">
-                            <button class="tab-btn active" data-target="mission">使命</button>
-                            <button class="tab-btn" data-target="vision">愿景</button>
-                            <button class="tab-btn" data-target="values">价值观</button>
-                        </div>
-                        <div class="tab-content">
-                            <div id="mission" class="tab-pane active">
-                                <p>我们的使命是创建高质量的网站和应用程序，帮助客户实现他们的目标。我们致力于通过技术创新和设计来解决实际问题。</p>
+            </div>
+        </section>
+
+        <section class="itinerary">
+            <h2 id="itinerary-heading">详细行程</h2>
+            <div class="days-nav">
+                <button class="day-btn active" data-day="1">第一天</button>
+                <button class="day-btn" data-day="2">第二天</button>
+                <button class="day-btn" data-day="3">第三天</button>
+            </div>
+
+            <div class="day-content active" id="day-1">
+                <h3>第一天：南京→宜兴→竹海风景区</h3>
+                <div class="timeline">
+                    <div class="time-item">
+                        <div class="time">上午</div>
+                        <div class="event">
+                            <h4>南京出发前往宜兴</h4>
+                            <p>从南京乘坐高铁/动车前往宜兴，约1.5小时车程</p>
+                            <p>抵达宜兴后，在市区吃午饭，品尝当地美食</p>
+                            <div class="travel-tip">
+                                <i class="fas fa-info-circle"></i>
+                                <span>高铁/动车是最便捷的交通方式，建议提前预订车票</span>
                             </div>
-                            <div id="vision" class="tab-pane">
-                                <p>我们的愿景是成为行业领先的解决方案提供商，为客户提供卓越的服务和技术支持，帮助他们在数字时代取得成功。</p>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <div class="time">下午</div>
+                        <div class="event">
+                            <h4>游览竹海风景区</h4>
+                            <p>前往宜兴竹海风景区（华东第一竹海），欣赏竹林风光</p>
+                            <p>游览重点：镜湖揽胜区、翡翠长廊区、观瀑阁等</p>
+                            <p>可乘坐竹筏体验"船在水中行，桨在洞上划"的乐趣</p>
+                            <div class="travel-tip">
+                                <i class="fas fa-info-circle"></i>
+                                <span>这里游客较少，适合悠闲欣赏翠绿的竹海风光</span>
                             </div>
-                            <div id="values" class="tab-pane">
-                                <p>我们的核心价值观包括质量、创新、诚信和客户满意度。我们相信通过坚持这些价值观，我们可以建立长期合作关系。</p>
+                            <div class="spot-image">
+                                <img src="./images/bamboo_sea.jpg" alt="竹海风景区">
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 服务区域 -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>我们的服务</h2>
-                <p>我们提供的专业服务</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="icon-web"></i>
-                    </div>
-                    <h3>网站开发</h3>
-                    <p>创建响应式、用户友好的网站，确保良好的用户体验和搜索引擎优化。</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="icon-app"></i>
-                    </div>
-                    <h3>应用开发</h3>
-                    <p>开发创新的移动和网络应用程序，满足您的业务需求和用户期望。</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="icon-design"></i>
-                    </div>
-                    <h3>UI/UX设计</h3>
-                    <p>创建吸引人的用户界面和流畅的用户体验，提高用户参与度和满意度。</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="icon-marketing"></i>
-                    </div>
-                    <h3>数字营销</h3>
-                    <p>通过有效的营销策略和工具，提高您的在线知名度和流量。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 作品区域 -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>我们的作品</h2>
-                <p>查看我们的最新项目</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://placehold.co/400x300" alt="项目1" class="lazy-load" data-src="https://placehold.co/400x300">
-                    <div class="portfolio-overlay">
-                        <h3>项目名称1</h3>
-                        <p>网站开发</p>
-                        <a href="#" class="btn">查看详情</a>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://placehold.co/400x300" alt="项目2" class="lazy-load" data-src="https://placehold.co/400x300">
-                    <div class="portfolio-overlay">
-                        <h3>项目名称2</h3>
-                        <p>移动应用</p>
-                        <a href="#" class="btn">查看详情</a>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://placehold.co/400x300" alt="项目3" class="lazy-load" data-src="https://placehold.co/400x300">
-                    <div class="portfolio-overlay">
-                        <h3>项目名称3</h3>
-                        <p>UI/UX设计</p>
-                        <a href="#" class="btn">查看详情</a>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://placehold.co/400x300" alt="项目4" class="lazy-load" data-src="https://placehold.co/400x300">
-                    <div class="portfolio-overlay">
-                        <h3>项目名称4</h3>
-                        <p>电子商务</p>
-                        <a href="#" class="btn">查看详情</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系区域 -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>联系我们</h2>
-                <p>我们期待听到您的声音</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="info-item">
-                        <h3>电子邮件</h3>
-                        <p>info@example.com</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>电话</h3>
-                        <p>+86 123 4567 8910</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>地址</h3>
-                        <p>中国北京市朝阳区某某街道123号</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-icon">微博</a>
-                        <a href="#" class="social-icon">微信</a>
-                        <a href="#" class="social-icon">知乎</a>
-                    </div>
-                </div>
-                <div class="contact-form" data-aos="fade-left">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">姓名</label>
-                            <input type="text" id="name" class="form-control" placeholder="请输入您的姓名">
+                    <div class="time-item">
+                        <div class="time">晚上</div>
+                        <div class="event">
+                            <h4>住宿与晚餐</h4>
+                            <p>入住竹海风景区附近民宿或酒店</p>
+                            <p>在当地餐厅品尝农家特色菜，如竹笋、山野菜等</p>
                         </div>
-                        <div class="form-group">
-                            <label for="email">电子邮件</label>
-                            <input type="email" id="email" class="form-control" placeholder="请输入您的电子邮件">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">留言</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="请输入您的留言"></textarea>
-                        </div>
-                        <button type="submit" class="btn primary-btn submit-btn">发送留言</button>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- 页脚区域 -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#">GitHub Demo</a>
+            <div class="day-content" id="day-2">
+                <h3>第二天：善卷洞风景区-龙背山森林公园</h3>
+                <div class="timeline">
+                    <div class="time-item">
+                        <div class="time">上午</div>
+                        <div class="event">
+                            <h4>游览善卷洞风景区</h4>
+                            <p>前往善卷洞风景区（宜兴"三奇"之首）</p>
+                            <p>游览上洞、中洞、下洞和水洞，体验不同洞穴的奇特景观</p>
+                            <p>中洞的"狮象大场"是一个面积达1000平方米的天然石厅</p>
+                            <div class="travel-tip">
+                                <i class="fas fa-info-circle"></i>
+                                <span>洞内温度约23℃，建议带件外套</span>
+                            </div>
+                            <div class="spot-image">
+                                <img src="./images/shanjuan_cave.jpg" alt="善卷洞风景区">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <div class="time">中午</div>
+                        <div class="event">
+                            <h4>午餐</h4>
+                            <p>在景区附近就餐</p>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <div class="time">下午</div>
+                        <div class="event">
+                            <h4>龙背山森林公园</h4>
+                            <p>前往龙背山森林公园欣赏自然风光</p>
+                            <p>在山间漫步，呼吸新鲜空气，欣赏山水风光</p>
+                            <div class="travel-tip">
+                                <i class="fas fa-info-circle"></i>
+                                <span>龙背山森林公园游客较少，是避开人流的好去处</span>
+                            </div>
+                            <div class="spot-image">
+                                <img src="./images/longbei_mountain.jpg" alt="龙背山森林公园">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <div class="time">晚上</div>
+                        <div class="event">
+                            <h4>返回市区</h4>
+                            <p>返回宜兴市区</p>
+                            <p>在市区品尝宜兴特色美食</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-nav">
+            </div>
+
+            <div class="day-content" id="day-3">
+                <h3>第三天：阳羡湖-团氿风景区-返回南京</h3>
+                <div class="timeline">
+                    <div class="time-item">
+                        <div class="time">上午</div>
+                        <div class="event">
+                            <h4>阳羡湖景区</h4>
+                            <p>前往阳羡湖景区，欣赏湖光山色</p>
+                            <p>可以沿湖漫步或租船游湖</p>
+                            <div class="travel-tip">
+                                <i class="fas fa-info-circle"></i>
+                                <span>阳羡湖是一处较为原生态的自然景点，游客相对较少</span>
+                            </div>
+                            <div class="spot-image">
+                                <img src="./images/yangxian_lake.jpg" alt="阳羡湖景区">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <div class="time">中午</div>
+                        <div class="event">
+                            <h4>午餐</h4>
+                            <p>在当地品尝宜兴特色小吃</p>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <div class="time">下午</div>
+                        <div class="event">
+                            <h4>团氿风景区</h4>
+                            <p>前往团氿风景区，欣赏水景和山水美景</p>
+                            <p>静静享受大自然的美丽</p>
+                            <div class="travel-tip">
+                                <i class="fas fa-info-circle"></i>
+                                <span>团氿风景区游客较少，环境优美，适合放松心情</span>
+                            </div>
+                            <div class="spot-image">
+                                <img src="./images/tuanqi_scenic.jpg" alt="团氿风景区">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-item">
+                        <div class="time">晚上</div>
+                        <div class="event">
+                            <h4>返回南京</h4>
+                            <p>乘坐高铁/动车返回南京</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-info">
+            <h2>旅行贴士</h2>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>交通建议</h3>
                     <ul>
-                        <li><a href="#home">首页</a></li>
-                        <li><a href="#about">关于</a></li>
-                        <li><a href="#services">服务</a></li>
-                        <li><a href="#portfolio">作品</a></li>
-                        <li><a href="#contact">联系我们</a></li>
+                        <li><strong>南京到宜兴</strong>：高铁/动车约1.5小时</li>
+                        <li><strong>自驾</strong>：走宁杭高速，约2小时</li>
+                        <li><strong>宜兴市内</strong>：可租车、打车或乘坐公交车</li>
+                        <li>市内有旅游2路可直达竹海和善卷洞</li>
                     </ul>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2023 GitHub Demo. 保留所有权利。</p>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>饮食推荐</h3>
+                    <ul>
+                        <li><strong>宜兴当地美食</strong>：竹笋炒肉、山野菜、农家菜</li>
+                        <li><strong>特色茶饮</strong>：阳羡茶（宜兴出产的名茶）</li>
+                        <li><strong>特色小吃</strong>：宜兴蟹黄汤包、米猪、宜兴红烧肉</li>
+                    </ul>
                 </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>住宿建议</h3>
+                    <ul>
+                        <li><strong>竹海风景区附近</strong>：农家乐和特色民宿</li>
+                        <li><strong>宜兴市区</strong>：各类星级酒店和商务酒店</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>注意事项</h3>
+                    <ul>
+                        <li>五一期间建议错峰出行，早上较早出发</li>
+                        <li>准备防晒、防虫和雨具</li>
+                        <li>穿舒适的鞋子，因为行程中有较多步行</li>
+                        <li>善卷洞内温度约23℃，建议带件外套</li>
+                        <li>注意保护自然环境，不要乱扔垃圾</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2023 南京-宜兴三日自然风光游 | 设计：旅行爱好者</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript 文件 -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
