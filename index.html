@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Demo 页面</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 可选: AOS动画库 -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">GitHub Demo</a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#services">服务</a></li>
+                    <li><a href="#portfolio">作品</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首页区域 -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>欢迎访问 GitHub Demo</h1>
+                <p>这是一个通过GitHub Pages展示的示例网站</p>
+                <a href="#about" class="btn primary-btn">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于区域 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>关于我们</h2>
+                <p>了解更多关于我们的信息</p>
+            </div>
+            <div class="about-content">
+                <div class="about-img" data-aos="fade-right">
+                    <img src="https://placehold.co/600x400" alt="关于我们" class="lazy-load" data-src="https://placehold.co/600x400">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>我们是谁</h3>
+                    <p>这是一个示例文本，您可以在这里介绍您的团队、公司或项目。详细说明您的使命、愿景和价值观。分享您的故事，让访问者了解您。</p>
+                    <p>您可以在这里添加更多段落，分享您的历史、成就和未来计划。这些内容有助于建立与访问者的联系并增强信任感。</p>
+                    <div class="tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-target="mission">使命</button>
+                            <button class="tab-btn" data-target="vision">愿景</button>
+                            <button class="tab-btn" data-target="values">价值观</button>
+                        </div>
+                        <div class="tab-content">
+                            <div id="mission" class="tab-pane active">
+                                <p>我们的使命是创建高质量的网站和应用程序，帮助客户实现他们的目标。我们致力于通过技术创新和设计来解决实际问题。</p>
+                            </div>
+                            <div id="vision" class="tab-pane">
+                                <p>我们的愿景是成为行业领先的解决方案提供商，为客户提供卓越的服务和技术支持，帮助他们在数字时代取得成功。</p>
+                            </div>
+                            <div id="values" class="tab-pane">
+                                <p>我们的核心价值观包括质量、创新、诚信和客户满意度。我们相信通过坚持这些价值观，我们可以建立长期合作关系。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务区域 -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>我们的服务</h2>
+                <p>我们提供的专业服务</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="icon-web"></i>
+                    </div>
+                    <h3>网站开发</h3>
+                    <p>创建响应式、用户友好的网站，确保良好的用户体验和搜索引擎优化。</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="icon-app"></i>
+                    </div>
+                    <h3>应用开发</h3>
+                    <p>开发创新的移动和网络应用程序，满足您的业务需求和用户期望。</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="icon-design"></i>
+                    </div>
+                    <h3>UI/UX设计</h3>
+                    <p>创建吸引人的用户界面和流畅的用户体验，提高用户参与度和满意度。</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="icon-marketing"></i>
+                    </div>
+                    <h3>数字营销</h3>
+                    <p>通过有效的营销策略和工具，提高您的在线知名度和流量。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品区域 -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>我们的作品</h2>
+                <p>查看我们的最新项目</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://placehold.co/400x300" alt="项目1" class="lazy-load" data-src="https://placehold.co/400x300">
+                    <div class="portfolio-overlay">
+                        <h3>项目名称1</h3>
+                        <p>网站开发</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://placehold.co/400x300" alt="项目2" class="lazy-load" data-src="https://placehold.co/400x300">
+                    <div class="portfolio-overlay">
+                        <h3>项目名称2</h3>
+                        <p>移动应用</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://placehold.co/400x300" alt="项目3" class="lazy-load" data-src="https://placehold.co/400x300">
+                    <div class="portfolio-overlay">
+                        <h3>项目名称3</h3>
+                        <p>UI/UX设计</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://placehold.co/400x300" alt="项目4" class="lazy-load" data-src="https://placehold.co/400x300">
+                    <div class="portfolio-overlay">
+                        <h3>项目名称4</h3>
+                        <p>电子商务</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系区域 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>联系我们</h2>
+                <p>我们期待听到您的声音</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <h3>电子邮件</h3>
+                        <p>info@example.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>电话</h3>
+                        <p>+86 123 4567 8910</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>地址</h3>
+                        <p>中国北京市朝阳区某某街道123号</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">微博</a>
+                        <a href="#" class="social-icon">微信</a>
+                        <a href="#" class="social-icon">知乎</a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" class="form-control" placeholder="请输入您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮件</label>
+                            <input type="email" id="email" class="form-control" placeholder="请输入您的电子邮件">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="请输入您的留言"></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚区域 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#">GitHub Demo</a>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#services">服务</a></li>
+                        <li><a href="#portfolio">作品</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 GitHub Demo. 保留所有权利。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript 文件 -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
