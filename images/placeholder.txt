@@ -1,9 +1,22 @@
-此文件夹将包含宜兴旅游路线相关图片：
+请将以下图片文件添加到此文件夹：
 
-1. bamboo_sea.jpg - 竹海风景区图片
-2. shanjuan_cave.jpg - 善卷洞风景区图片
-3. longbei_mountain.jpg - 龙背山森林公园图片
-4. yangxian_lake.jpg - 阳羡湖景区图片
-5. tuanqi_scenic.jpg - 团氿风景区图片
+1. map.jpg - 镇江地图与景点分布图
+2. breakfast.jpg - 镇江特色早餐图片
+3. jinshan.jpg - 金山寺图片
+4. beigu.jpg - 北固山图片
+5. xijindu.jpg - 西津渡古街图片
+6. museum.jpg - 镇江博物馆图片
+7. jiaoshan.jpg - 焦山风景区图片
+8. vinegar.jpg - 醋文化博物馆图片
+9. guogaimian.jpg - 锅盖面图片
+10. yaorou.jpg - 镇江肴肉图片
+11. xiangcu.jpg - 镇江香醋图片
+12. chabing.jpg - 干烧岔饼图片
+13. xiakehuang.jpg - 蟹壳黄图片
 
-请将相关图片放入此文件夹中。如果没有实际图片，网页将显示占位图像。
+图片格式建议：
+- 分辨率建议大于 1000×600 像素
+- 文件格式：JPG 或 PNG
+- 每张图片大小建议不超过 500KB
+
+此文件夹用于存放网站所需的图片资源，添加图片后此文本文件可删除。

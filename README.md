@@ -1,58 +1,59 @@
-# 宜兴旅游路线展示项目
+# 镇江一日游网站
 
-这是一个使用HTML、CSS和JavaScript创建的示例网站项目，用于展示旅游路线信息。
+## 项目描述
 
-## 网站访问
-
-本网站通过GitHub Pages部署，可通过以下链接访问：
-
-[https://yplian.github.io/mcpDemoNew/](https://yplian.github.io/mcpDemoNew/)
-
-直接访问index.html:
-[https://yplian.github.io/mcpDemoNew/index.html](https://yplian.github.io/mcpDemoNew/index.html)
+这是一个静态网站项目，展示镇江一日游的完整行程规划、景点介绍、美食推荐和实用信息。网站采用响应式设计，适合在各种设备上浏览。
 
 ## 功能特点
 
-- 响应式设计，兼容各种设备
-- 现代化UI界面
-- 平滑滚动效果
-- 交互式选项卡
-- 表单验证
-- 延迟加载图片
-- 移动端菜单
+- 详细的一日游行程时间安排
+- 景点详情与游览建议
+- 特色美食推荐
+- 转转卡使用指南
+- 交通和购物建议
+- 响应式布局，适配各种设备
 
 ## 文件结构
 
-- `index.html` - 主页HTML文件
-- `style.css` - 样式表文件
-- `main.js` - JavaScript功能文件
-- `.nojekyll` - 禁用GitHub Pages的Jekyll处理
+```
+static/
+├── index.html      # 主页面
+├── css/
+│   └── style.css   # 样式表
+├── js/
+│   └── script.js   # 交互脚本
+└── images/         # 图片资源文件夹
+    ├── map.jpg     # 镇江地图
+    ├── jinshan.jpg # 金山寺图片
+    ├── beigu.jpg   # 北固山图片
+    └── ...
+```
 
-## 使用技术
+## 使用说明
+
+1. 直接用浏览器打开 `index.html` 文件即可查看网站
+2. 网站无需后端服务器支持，可以部署在任何静态网站托管服务上
+
+## 注意事项
+
+- 图片资源需要自行添加到 `images` 文件夹中
+- 景点开放时间和票价信息可能会变动，建议以官方信息为准
+
+## 技术栈
 
 - HTML5
-- CSS3
+- CSS3 (Flexbox, Grid, Media Queries)
 - JavaScript (ES6+)
-- AOS动画库
+- Font Awesome 图标
 
-## 部署说明
+## 开发建议
 
-要在GitHub Pages上部署此网站：
+如需修改或扩展本网站，可以：
+- 添加更多景点和行程方案
+- 集成地图API实现路线规划
+- 添加天气API显示目的地天气
+- 增加评论系统让用户分享体验
 
-1. 确保仓库已设为公开
-2. 进入仓库设置 -> Pages
-3. 在"Source"部分选择"Deploy from a branch"
-4. 选择"main"分支和根目录("/")
-5. 点击"Save"按钮
-6. 等待几分钟完成部署
+## 许可证
 
-## 访问问题解决
-
-如果访问网站时出现问题：
-
-1. 尝试直接访问index.html文件
-2. 清除浏览器缓存
-3. 确认GitHub Pages已成功启用
-4. 检查部署状态是否成功
-
-更新日期：2023年4月29日
+MIT许可证

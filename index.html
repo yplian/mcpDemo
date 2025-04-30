@@ -3,257 +3,419 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>南京-宜兴三日自然风光游</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>镇江一日游指南</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1>南京-宜兴三日自然风光游</h1>
-            <p class="subtitle">探索山水风光，避开五一人流</p>
+            <h1><i class="fas fa-map-marked-alt"></i> 镇江一日游完美攻略</h1>
+            <p class="subtitle">七点半到镇江火车站，转转卡玩转镇江经典景点</p>
         </div>
     </header>
 
-    <div class="container">
-        <section class="intro">
-            <div class="intro-content">
-                <h2>行程概览</h2>
-                <p>这是一条为期三天的自然风光路线，从南京出发，探索宜兴的美丽自然景观，同时避开五一假期人流量大的热门景点。</p>
-                <div class="trip-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-mountain"></i>
-                        <h3>山水风光</h3>
-                        <p>欣赏竹海风景区、龙背山森林公园等自然风景</p>
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#overview" class="active">行程概览</a></li>
+                <li><a href="#morning">上午行程</a></li>
+                <li><a href="#afternoon">下午行程</a></li>
+                <li><a href="#food">美食推荐</a></li>
+                <li><a href="#tips">实用信息</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="overview" class="section">
+            <h2 class="section-title">行程概览</h2>
+            <div class="overview-content">
+                <div class="map-container">
+                    <img src="images/map.jpg" alt="镇江一日游地图" class="map-image">
+                    <p class="map-caption">镇江经典景点分布图</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time">7:30</div>
+                        <div class="event">抵达镇江火车站，享用早餐</div>
                     </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-utensils"></i>
-                        <h3>美食体验</h3>
-                        <p>品尝宜兴特色美食和本地农家菜</p>
+                    <div class="timeline-item">
+                        <div class="time">8:00-10:00</div>
+                        <div class="event">游览金山寺</div>
                     </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-leaf"></i>
-                        <h3>自然探索</h3>
-                        <p>体验溶洞探险、竹林漫步和湖边休闲</p>
+                    <div class="timeline-item">
+                        <div class="time">10:30-12:00</div>
+                        <div class="event">游览北固山</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">12:00-13:30</div>
+                        <div class="event">午餐时间</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">13:30-15:00</div>
+                        <div class="event">西津渡古街</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">15:00-16:00</div>
+                        <div class="event">镇江博物馆</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">16:00-17:30</div>
+                        <div class="event">焦山风景区</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">17:30-18:00</div>
+                        <div class="event">醋文化博物馆</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">18:00-19:00</div>
+                        <div class="event">晚餐</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">19:00-19:30</div>
+                        <div class="event">返回火车站</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="itinerary">
-            <h2 id="itinerary-heading">详细行程</h2>
-            <div class="days-nav">
-                <button class="day-btn active" data-day="1">第一天</button>
-                <button class="day-btn" data-day="2">第二天</button>
-                <button class="day-btn" data-day="3">第三天</button>
-            </div>
+        <section id="morning" class="section">
+            <h2 class="section-title">上午行程</h2>
 
-            <div class="day-content active" id="day-1">
-                <h3>第一天：南京→宜兴→竹海风景区</h3>
-                <div class="timeline">
-                    <div class="time-item">
-                        <div class="time">上午</div>
-                        <div class="event">
-                            <h4>南京出发前往宜兴</h4>
-                            <p>从南京乘坐高铁/动车前往宜兴，约1.5小时车程</p>
-                            <p>抵达宜兴后，在市区吃午饭，品尝当地美食</p>
-                            <div class="travel-tip">
-                                <i class="fas fa-info-circle"></i>
-                                <span>高铁/动车是最便捷的交通方式，建议提前预订车票</span>
-                            </div>
-                        </div>
+            <div class="attraction-card">
+                <div class="attraction-header">
+                    <h3>早餐（7:30-8:00）</h3>
+                    <span class="duration">用餐时间：约30分钟</span>
+                </div>
+                <div class="attraction-content">
+                    <div class="attraction-image">
+                        <img src="images/breakfast.jpg" alt="镇江特色早餐">
                     </div>
-                    <div class="time-item">
-                        <div class="time">下午</div>
-                        <div class="event">
-                            <h4>游览竹海风景区</h4>
-                            <p>前往宜兴竹海风景区（华东第一竹海），欣赏竹林风光</p>
-                            <p>游览重点：镜湖揽胜区、翡翠长廊区、观瀑阁等</p>
-                            <p>可乘坐竹筏体验"船在水中行，桨在洞上划"的乐趣</p>
-                            <div class="travel-tip">
-                                <i class="fas fa-info-circle"></i>
-                                <span>这里游客较少，适合悠闲欣赏翠绿的竹海风光</span>
-                            </div>
-                            <div class="spot-image">
-                                <img src="./images/bamboo_sea.jpg" alt="竹海风景区">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-item">
-                        <div class="time">晚上</div>
-                        <div class="event">
-                            <h4>住宿与晚餐</h4>
-                            <p>入住竹海风景区附近民宿或酒店</p>
-                            <p>在当地餐厅品尝农家特色菜，如竹笋、山野菜等</p>
-                        </div>
+                    <div class="attraction-details">
+                        <h4>推荐美食：</h4>
+                        <ul>
+                            <li><strong>锅盖面：</strong>镇江最具特色的早餐，筋道爽滑（约10-15元）</li>
+                            <li><strong>镇江馄饨：</strong>皮薄馅大，鲜美可口（约8-12元）</li>
+                            <li><strong>蟹壳黄：</strong>传统糕点，外焦里嫩（约5-8元/个）</li>
+                            <li><strong>三怪汤：</strong>以姜末、醋、糖为主料，开胃提神（约5元）</li>
+                        </ul>
+                        <h4>推荐早餐店：</h4>
+                        <ul>
+                            <li>陶大面馆（火车站附近有分店）</li>
+                            <li>达达面馆</li>
+                            <li>张二面馆</li>
+                            <li>老字号早点铺</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="day-content" id="day-2">
-                <h3>第二天：善卷洞风景区-龙背山森林公园</h3>
-                <div class="timeline">
-                    <div class="time-item">
-                        <div class="time">上午</div>
-                        <div class="event">
-                            <h4>游览善卷洞风景区</h4>
-                            <p>前往善卷洞风景区（宜兴"三奇"之首）</p>
-                            <p>游览上洞、中洞、下洞和水洞，体验不同洞穴的奇特景观</p>
-                            <p>中洞的"狮象大场"是一个面积达1000平方米的天然石厅</p>
-                            <div class="travel-tip">
-                                <i class="fas fa-info-circle"></i>
-                                <span>洞内温度约23℃，建议带件外套</span>
-                            </div>
-                            <div class="spot-image">
-                                <img src="./images/shanjuan_cave.jpg" alt="善卷洞风景区">
-                            </div>
-                        </div>
+            <div class="attraction-card">
+                <div class="attraction-header">
+                    <h3>金山寺（8:00-10:00）</h3>
+                    <span class="duration">游玩时间：约2小时</span>
+                </div>
+                <div class="attraction-content">
+                    <div class="attraction-image">
+                        <img src="images/jinshan.jpg" alt="金山寺">
                     </div>
-                    <div class="time-item">
-                        <div class="time">中午</div>
-                        <div class="event">
-                            <h4>午餐</h4>
-                            <p>在景区附近就餐</p>
-                        </div>
-                    </div>
-                    <div class="time-item">
-                        <div class="time">下午</div>
-                        <div class="event">
-                            <h4>龙背山森林公园</h4>
-                            <p>前往龙背山森林公园欣赏自然风光</p>
-                            <p>在山间漫步，呼吸新鲜空气，欣赏山水风光</p>
-                            <div class="travel-tip">
-                                <i class="fas fa-info-circle"></i>
-                                <span>龙背山森林公园游客较少，是避开人流的好去处</span>
-                            </div>
-                            <div class="spot-image">
-                                <img src="./images/longbei_mountain.jpg" alt="龙背山森林公园">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-item">
-                        <div class="time">晚上</div>
-                        <div class="event">
-                            <h4>返回市区</h4>
-                            <p>返回宜兴市区</p>
-                            <p>在市区品尝宜兴特色美食</p>
-                        </div>
+                    <div class="attraction-details">
+                        <h4>交通：</h4>
+                        <p>火车站乘坐216路/115路/17路到金山公园站（约20分钟）</p>
+
+                        <h4>门票：</h4>
+                        <p>约40-50元（可使用转转卡）</p>
+
+                        <h4>游览重点：</h4>
+                        <ul>
+                            <li><strong>大雄宝殿：</strong>20分钟</li>
+                            <li><strong>多宝塔：</strong>20分钟</li>
+                            <li><strong>法海洞：</strong>15分钟</li>
+                            <li><strong>白龙洞：</strong>15分钟</li>
+                            <li><strong>江天一览景观：</strong>30分钟</li>
+                            <li><strong>其他景点和拍照：</strong>20分钟</li>
+                        </ul>
+
+                        <h4>小贴士：</h4>
+                        <p>金山寺与白蛇传故事关系密切，是镇江最著名的佛教寺院之一。从山顶可以俯瞰长江，景色壮观。</p>
                     </div>
                 </div>
             </div>
 
-            <div class="day-content" id="day-3">
-                <h3>第三天：阳羡湖-团氿风景区-返回南京</h3>
-                <div class="timeline">
-                    <div class="time-item">
-                        <div class="time">上午</div>
-                        <div class="event">
-                            <h4>阳羡湖景区</h4>
-                            <p>前往阳羡湖景区，欣赏湖光山色</p>
-                            <p>可以沿湖漫步或租船游湖</p>
-                            <div class="travel-tip">
-                                <i class="fas fa-info-circle"></i>
-                                <span>阳羡湖是一处较为原生态的自然景点，游客相对较少</span>
-                            </div>
-                            <div class="spot-image">
-                                <img src="./images/yangxian_lake.jpg" alt="阳羡湖景区">
-                            </div>
-                        </div>
+            <div class="attraction-card">
+                <div class="attraction-header">
+                    <h3>北固山（10:30-12:00）</h3>
+                    <span class="duration">游玩时间：约1.5小时</span>
+                </div>
+                <div class="attraction-content">
+                    <div class="attraction-image">
+                        <img src="images/beigu.jpg" alt="北固山">
                     </div>
-                    <div class="time-item">
-                        <div class="time">中午</div>
-                        <div class="event">
-                            <h4>午餐</h4>
-                            <p>在当地品尝宜兴特色小吃</p>
-                        </div>
-                    </div>
-                    <div class="time-item">
-                        <div class="time">下午</div>
-                        <div class="event">
-                            <h4>团氿风景区</h4>
-                            <p>前往团氿风景区，欣赏水景和山水美景</p>
-                            <p>静静享受大自然的美丽</p>
-                            <div class="travel-tip">
-                                <i class="fas fa-info-circle"></i>
-                                <span>团氿风景区游客较少，环境优美，适合放松心情</span>
-                            </div>
-                            <div class="spot-image">
-                                <img src="./images/tuanqi_scenic.jpg" alt="团氿风景区">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-item">
-                        <div class="time">晚上</div>
-                        <div class="event">
-                            <h4>返回南京</h4>
-                            <p>乘坐高铁/动车返回南京</p>
-                        </div>
+                    <div class="attraction-details">
+                        <h4>交通：</h4>
+                        <p>从金山寺乘坐49路或8路前往北固山（约30分钟）</p>
+
+                        <h4>门票：</h4>
+                        <p>约30-40元（可使用转转卡）</p>
+
+                        <h4>游览重点：</h4>
+                        <ul>
+                            <li><strong>北固楼：</strong>30分钟</li>
+                            <li><strong>多景楼：</strong>20分钟</li>
+                            <li><strong>怀古亭：</strong>15分钟</li>
+                            <li><strong>俯瞰长江景观：</strong>25分钟</li>
+                        </ul>
+
+                        <h4>小贴士：</h4>
+                        <p>北固山是三国时期孙权"居高临下，尽览江山"的地方，历史文化底蕴深厚，是观赏长江景色的绝佳位置。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="travel-info">
-            <h2>旅行贴士</h2>
+        <section id="afternoon" class="section">
+            <h2 class="section-title">下午行程</h2>
+
+            <div class="attraction-card">
+                <div class="attraction-header">
+                    <h3>西津渡古街（13:30-15:00）</h3>
+                    <span class="duration">游玩时间：约1.5小时</span>
+                </div>
+                <div class="attraction-content">
+                    <div class="attraction-image">
+                        <img src="images/xijindu.jpg" alt="西津渡古街">
+                    </div>
+                    <div class="attraction-details">
+                        <h4>交通：</h4>
+                        <p>从北固山乘坐公交前往西津渡（约25分钟）</p>
+
+                        <h4>门票：</h4>
+                        <p>古街免费开放，部分景点单独收费</p>
+
+                        <h4>游览重点：</h4>
+                        <ul>
+                            <li><strong>西津渡历史文化博物馆：</strong>30分钟</li>
+                            <li><strong>英国领事馆旧址：</strong>20分钟</li>
+                            <li><strong>西津渡古码头：</strong>15分钟</li>
+                            <li><strong>昭关石塔：</strong>15分钟</li>
+                            <li><strong>古街漫步与特产购买：</strong>30分钟</li>
+                        </ul>
+
+                        <h4>小贴士：</h4>
+                        <p>西津渡是镇江保存最完好的历史街区，千年古渡展现了镇江作为水陆交通枢纽的历史地位。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <div class="attraction-header">
+                    <h3>镇江博物馆（15:00-16:00）</h3>
+                    <span class="duration">游玩时间：约1小时</span>
+                </div>
+                <div class="attraction-content">
+                    <div class="attraction-image">
+                        <img src="images/museum.jpg" alt="镇江博物馆">
+                    </div>
+                    <div class="attraction-details">
+                        <h4>交通：</h4>
+                        <p>从西津渡步行约10分钟</p>
+
+                        <h4>门票：</h4>
+                        <p>免费参观</p>
+
+                        <h4>游览重点：</h4>
+                        <ul>
+                            <li><strong>镇江三怪文化展：</strong>20分钟</li>
+                            <li><strong>三国文化展：</strong>20分钟</li>
+                            <li><strong>其他展区：</strong>20分钟</li>
+                        </ul>
+
+                        <h4>小贴士：</h4>
+                        <p>镇江博物馆馆藏丰富，是了解镇江历史文化的重要场所，周一闭馆，请提前确认开放时间。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <div class="attraction-header">
+                    <h3>焦山风景区（16:00-17:30）</h3>
+                    <span class="duration">游玩时间：约1.5小时</span>
+                </div>
+                <div class="attraction-content">
+                    <div class="attraction-image">
+                        <img src="images/jiaoshan.jpg" alt="焦山风景区">
+                    </div>
+                    <div class="attraction-details">
+                        <h4>交通：</h4>
+                        <p>从博物馆乘坐104路到焦山风景区（约20分钟）</p>
+
+                        <h4>门票：</h4>
+                        <p>约40元（可使用转转卡）</p>
+
+                        <h4>游览重点：</h4>
+                        <ul>
+                            <li><strong>定慧寺：</strong>30分钟</li>
+                            <li><strong>千佛塔：</strong>20分钟</li>
+                            <li><strong>江南第一藏经楼：</strong>20分钟</li>
+                            <li><strong>景观欣赏和拍照：</strong>20分钟</li>
+                        </ul>
+
+                        <h4>小贴士：</h4>
+                        <p>焦山有"天下第一江山"之称，是镇江三山之一，融佛教文化与自然景观为一体。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attraction-card">
+                <div class="attraction-header">
+                    <h3>醋文化博物馆（17:30-18:00）</h3>
+                    <span class="duration">游玩时间：约30分钟</span>
+                </div>
+                <div class="attraction-content">
+                    <div class="attraction-image">
+                        <img src="images/vinegar.jpg" alt="醋文化博物馆">
+                    </div>
+                    <div class="attraction-details">
+                        <h4>交通：</h4>
+                        <p>从焦山返回市区（约15分钟）</p>
+
+                        <h4>门票：</h4>
+                        <p>免费或象征性收费</p>
+
+                        <h4>游览重点：</h4>
+                        <ul>
+                            <li><strong>了解镇江香醋酿造工艺和历史：</strong>15分钟</li>
+                            <li><strong>购买正宗恒顺香醋和其他特产：</strong>15分钟</li>
+                        </ul>
+
+                        <h4>小贴士：</h4>
+                        <p>镇江香醋是"镇江三怪"之一，参观醋文化博物馆可全面了解香醋产业的发展历程。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="food" class="section">
+            <h2 class="section-title">美食推荐</h2>
+
+            <div class="food-container">
+                <div class="food-item">
+                    <div class="food-image">
+                        <img src="images/guogaimian.jpg" alt="锅盖面">
+                    </div>
+                    <div class="food-info">
+                        <h3>锅盖面</h3>
+                        <p>镇江名小吃，清汤面上加一个特制的锅盖，风味独特，筋道爽滑。</p>
+                        <div class="price">价格：10-20元/碗</div>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <div class="food-image">
+                        <img src="images/yaorou.jpg" alt="肴肉">
+                    </div>
+                    <div class="food-info">
+                        <h3>镇江肴肉</h3>
+                        <p>"镇江三怪"之一，肉质软烂，色泽红亮，香而不腻，冷盘佳品。</p>
+                        <div class="price">价格：30-50元/份</div>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <div class="food-image">
+                        <img src="images/xiangcu.jpg" alt="香醋">
+                    </div>
+                    <div class="food-info">
+                        <h3>镇江香醋</h3>
+                        <p>"镇江三怪"之一，色泽乌黑，香气浓郁，酸味纯正。</p>
+                        <div class="price">价格：20-50元/瓶</div>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <div class="food-image">
+                        <img src="images/chabing.jpg" alt="干烧岔饼">
+                    </div>
+                    <div class="food-info">
+                        <h3>干烧岔饼</h3>
+                        <p>镇江传统名菜，将面饼和猪肉片交错叠放，经红烧而成，咸鲜适口。</p>
+                        <div class="price">价格：40-60元/份</div>
+                    </div>
+                </div>
+
+                <div class="food-item">
+                    <div class="food-image">
+                        <img src="images/xiakehuang.jpg" alt="蟹壳黄">
+                    </div>
+                    <div class="food-info">
+                        <h3>蟹壳黄</h3>
+                        <p>镇江传统糕点，色如蟹壳，外酥里嫩，香甜可口。</p>
+                        <div class="price">价格：5-8元/个</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="section">
+            <h2 class="section-title">实用信息</h2>
+
             <div class="tips-container">
                 <div class="tip-card">
-                    <div class="tip-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3>交通建议</h3>
+                    <div class="tip-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>转转卡使用</h3>
                     <ul>
-                        <li><strong>南京到宜兴</strong>：高铁/动车约1.5小时</li>
-                        <li><strong>自驾</strong>：走宁杭高速，约2小时</li>
-                        <li><strong>宜兴市内</strong>：可租车、打车或乘坐公交车</li>
-                        <li>市内有旅游2路可直达竹海和善卷洞</li>
+                        <li>金山寺（门票：约40-50元）</li>
+                        <li>北固山（门票：约30-40元）</li>
+                        <li>焦山（门票：约40元）</li>
+                        <li>部分博物馆和展览馆</li>
+                        <li>购买地点：火车站旅游咨询中心、各大景点售票处</li>
                     </ul>
                 </div>
+
                 <div class="tip-card">
-                    <div class="tip-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>饮食推荐</h3>
+                    <div class="tip-icon"><i class="fas fa-bus"></i></div>
+                    <h3>交通信息</h3>
                     <ul>
-                        <li><strong>宜兴当地美食</strong>：竹笋炒肉、山野菜、农家菜</li>
-                        <li><strong>特色茶饮</strong>：阳羡茶（宜兴出产的名茶）</li>
-                        <li><strong>特色小吃</strong>：宜兴蟹黄汤包、米猪、宜兴红烧肉</li>
+                        <li>镇江市内公交线路便捷，票价约2元/次</li>
+                        <li>景点之间距离适中，部分可步行到达</li>
+                        <li>高峰期建议预留额外10-15分钟交通时间</li>
+                        <li>手机导航或公交查询APP可方便出行</li>
                     </ul>
                 </div>
+
                 <div class="tip-card">
-                    <div class="tip-icon">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <h3>住宿建议</h3>
+                    <div class="tip-icon"><i class="fas fa-shopping-bag"></i></div>
+                    <h3>购物建议</h3>
                     <ul>
-                        <li><strong>竹海风景区附近</strong>：农家乐和特色民宿</li>
-                        <li><strong>宜兴市区</strong>：各类星级酒店和商务酒店</li>
+                        <li>镇江香醋：恒顺品牌最为正宗（小瓶装20-50元）</li>
+                        <li>醋制品：醋蛋、醋泡姜等特色产品</li>
+                        <li>肴肉：真空包装可带回（30-50元/份）</li>
+                        <li>茶食：润州糕点、茶干等（10-30元/盒）</li>
                     </ul>
                 </div>
+
                 <div class="tip-card">
-                    <div class="tip-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <h3>注意事项</h3>
+                    <div class="tip-icon"><i class="fas fa-cloud-sun"></i></div>
+                    <h3>季节建议</h3>
                     <ul>
-                        <li>五一期间建议错峰出行，早上较早出发</li>
-                        <li>准备防晒、防虫和雨具</li>
-                        <li>穿舒适的鞋子，因为行程中有较多步行</li>
-                        <li>善卷洞内温度约23℃，建议带件外套</li>
-                        <li>注意保护自然环境，不要乱扔垃圾</li>
+                        <li>春秋季最佳：气候宜人，景色优美</li>
+                        <li>夏季注意防晒、补水，景区游客较多</li>
+                        <li>冬季游览人少，但部分景点可能受天气影响</li>
+                        <li>雨天带伞，准备舒适防滑的鞋子</li>
                     </ul>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <p>© 2023 南京-宜兴三日自然风光游 | 设计：旅行爱好者</p>
-            </div>
+            <p>&copy; 2025 镇江一日游攻略 | 行程设计：旅游爱好者</p>
+            <p>本攻略仅供参考，具体景点开放时间和票价请以官方信息为准</p>
         </div>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

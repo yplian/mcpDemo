@@ -1,158 +1,144 @@
-// 等待DOM加载完成
-document.addEventListener('DOMContentLoaded', () => {
-    // 行程选项卡切换功能
-    const dayBtns = document.querySelectorAll('.day-btn');
-    const dayContents = document.querySelectorAll('.day-content');
+// 页面加载完成后执行
+document.addEventListener('DOMContentLoaded', function() {
+    // 导航栏滚动时固定
+    const nav = document.querySelector('.main-nav');
+    const navHeight = nav.offsetHeight;
+    const header = document.querySelector('.header');
+    const headerHeight = header.offsetHeight;
 
-    dayBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // 移除所有按钮和内容的active类
-            dayBtns.forEach(b => b.classList.remove('active'));
-            dayContents.forEach(content => content.classList.remove('active'));
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > headerHeight) {
+            nav.classList.add('fixed');
+            document.body.style.paddingTop = navHeight + 'px';
+        } else {
+            nav.classList.remove('fixed');
+            document.body.style.paddingTop = 0;
+        }
+    });
 
-            // 为当前点击的按钮添加active类
-            btn.classList.add('active');
+    // 导航栏激活状态
+    const navLinks = document.querySelectorAll('.main-nav a');
+    const sections = document.querySelectorAll('.section');
 
-            // 显示对应的内容
-            const dayNumber = btn.getAttribute('data-day');
-            const targetContent = document.getElementById(`day-${dayNumber}`);
-            targetContent.classList.add('active');
+    window.addEventListener('scroll', function() {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
         });
     });
 
-    // 图片加载处理
-    const images = document.querySelectorAll('.spot-image img');
+    // 平滑滚动到锚点
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
 
-    // 设置默认的占位图样式
-    const createPlaceholder = (imgElement, placeholderText) => {
-        const parent = imgElement.parentElement;
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
 
-        // 创建占位元素
-        const placeholder = document.createElement('div');
-        placeholder.className = 'image-placeholder';
-        placeholder.style.backgroundColor = '#e0e0e0';
-        placeholder.style.width = '100%';
-        placeholder.style.height = '240px';
-        placeholder.style.display = 'flex';
-        placeholder.style.alignItems = 'center';
-        placeholder.style.justifyContent = 'center';
-        placeholder.style.color = '#666';
-        placeholder.style.fontSize = '1.2rem';
-        placeholder.style.borderRadius = '8px';
+            window.scrollTo({
+                top: targetSection.offsetTop - navHeight,
+                behavior: 'smooth'
+            });
+        });
+    });
 
-        // 添加景点名称
-        const text = document.createElement('div');
-        text.textContent = placeholderText || '自然风光';
+    // 图片懒加载
+    const lazyImages = document.querySelectorAll('img');
 
-        // 添加图标
-        const icon = document.createElement('i');
-        icon.className = 'fas fa-image';
-        icon.style.marginRight = '10px';
-        icon.style.fontSize = '1.5rem';
+    const lazyLoad = function() {
+        let lazyImagePositions = [];
+        lazyImages.forEach(img => {
+            lazyImagePositions.push(img.getBoundingClientRect().top + window.scrollY);
+        });
 
-        // 组合占位图
-        const content = document.createElement('div');
-        content.style.display = 'flex';
-        content.style.flexDirection = 'column';
-        content.style.alignItems = 'center';
-        content.style.gap = '10px';
+        let onScrollLazy = function() {
+            for (let i = 0; i < lazyImages.length; i++) {
+                if (window.scrollY + window.innerHeight > lazyImagePositions[i] - 200) {
+                    if (lazyImages[i].getAttribute('data-src')) {
+                        lazyImages[i].src = lazyImages[i].getAttribute('data-src');
+                        lazyImages[i].removeAttribute('data-src');
+                    }
+                }
+            }
+        };
 
-        content.appendChild(icon);
-        content.appendChild(text);
-        placeholder.appendChild(content);
-
-        // 替换原图片
-        parent.replaceChild(placeholder, imgElement);
+        window.addEventListener('scroll', onScrollLazy);
+        window.addEventListener('resize', onScrollLazy);
+        window.addEventListener('orientationChange', onScrollLazy);
+        onScrollLazy();
     };
+
+    lazyLoad();
+
+    // 添加景点收藏功能
+    const attractionCards = document.querySelectorAll('.attraction-card');
+
+    attractionCards.forEach(card => {
+        const header = card.querySelector('.attraction-header');
+        const favoriteBtn = document.createElement('button');
+        favoriteBtn.className = 'favorite-btn';
+        favoriteBtn.innerHTML = '<i class="far fa-heart"></i>';
+        header.appendChild(favoriteBtn);
+
+        favoriteBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            if (this.classList.contains('active')) {
+                this.innerHTML = '<i class="fas fa-heart"></i>';
+            } else {
+                this.innerHTML = '<i class="far fa-heart"></i>';
+            }
+        });
+    });
+
+    // 响应式菜单
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    nav.querySelector('.container').prepend(menuToggle);
+
+    menuToggle.addEventListener('click', function() {
+        nav.querySelector('ul').classList.toggle('show');
+    });
+
+    // 图片点击放大
+    const images = document.querySelectorAll('.attraction-image img, .food-image img');
 
     images.forEach(img => {
-        // 设置图片加载动画
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 1s ease';
+        img.addEventListener('click', function() {
+            const overlay = document.createElement('div');
+            overlay.className = 'image-overlay';
 
-        // 图片加载成功时显示
-        img.onload = function() {
-            this.style.opacity = '1';
-        };
+            const imgClone = document.createElement('img');
+            imgClone.src = this.src;
 
-        // 图片加载失败时显示占位图
-        img.onerror = function() {
-            const altText = this.alt;
-            createPlaceholder(this, altText);
-        };
+            const closeBtn = document.createElement('span');
+            closeBtn.className = 'close-btn';
+            closeBtn.innerHTML = '&times;';
 
-        // 如果图片已经缓存，立即显示
-        if (img.complete) {
-            if (img.naturalWidth === 0) {
-                // 图片加载失败
-                const altText = img.alt;
-                createPlaceholder(img, altText);
-            } else {
-                // 图片已加载
-                img.style.opacity = '1';
-            }
-        }
-    });
+            overlay.appendChild(imgClone);
+            overlay.appendChild(closeBtn);
+            document.body.appendChild(overlay);
 
-    // 滚动动画
-    const scrollElements = document.querySelectorAll('section, .highlight-item, .tip-card');
+            closeBtn.addEventListener('click', function() {
+                document.body.removeChild(overlay);
+            });
 
-    const elementInView = (el, percentageScroll = 100) => {
-        const elementTop = el.getBoundingClientRect().top;
-        return (
-            elementTop <=
-            (window.innerHeight || document.documentElement.clientHeight) * (percentageScroll/100)
-        );
-    };
-
-    const displayScrollElement = (element) => {
-        element.classList.add('scrolled');
-    };
-
-    const hideScrollElement = (element) => {
-        element.classList.remove('scrolled');
-    };
-
-    const handleScrollAnimation = () => {
-        scrollElements.forEach((el) => {
-            if (elementInView(el, 90)) {
-                displayScrollElement(el);
-            } else {
-                hideScrollElement(el);
-            }
-        });
-    };
-
-    // 添加滚动效果的样式
-    const style = document.createElement('style');
-    style.textContent = `
-        section, .highlight-item, .tip-card {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        section.scrolled, .highlight-item.scrolled, .tip-card.scrolled {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    `;
-    document.head.appendChild(style);
-
-    // 初始检查元素是否在视图中
-    handleScrollAnimation();
-
-    // 监听滚动事件
-    window.addEventListener('scroll', () => {
-        handleScrollAnimation();
-    });
-
-    // 添加平滑滚动
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    document.body.removeChild(overlay);
+                }
             });
         });
     });
